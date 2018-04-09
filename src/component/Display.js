@@ -18,7 +18,7 @@ class Display extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="display">
                 <input value={this.props.value} 
                 type="string"
                 onChange={this.handleChange} 

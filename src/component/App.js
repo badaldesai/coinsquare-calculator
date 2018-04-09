@@ -3,6 +3,8 @@ import Display from './Display';
 import ButtonPanel from './ButtonPanel';
 import { getSolution } from '../calculate/getSolution';
 
+import '../index.css';
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -60,7 +62,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div className = "container">
+            <div className="calculator-app">
                 <Display 
                     value = {this.state.equation || this.state.solution }
                     changeHandler={this.handleChange}

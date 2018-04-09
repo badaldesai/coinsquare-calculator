@@ -8,9 +8,11 @@ class Button extends React.Component {
 
     render() {
         return(
-            <button onClick={this.handleClick} className="btn btn-light" >
-                {this.props.name}
-            </button>
+            <div className="button-container">
+                <button className="button" onClick={this.handleClick} >
+                    {this.props.name}
+                </button>
+            </div>
         )
     }
 }
