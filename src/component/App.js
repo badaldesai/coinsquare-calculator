@@ -44,8 +44,8 @@ class App extends React.Component {
                break;
            }
            default: {
-               console.log(this.state.question);
-               this.setState({equation: this.state.equation += buttonName});
+               const currentEquation = this.state.equation + buttonName;
+               this.setState({equation: currentEquation});
                break;
            }
        }

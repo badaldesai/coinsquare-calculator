@@ -14,6 +14,10 @@ export function getSolution(expression) {
             outputQueue.push(number);
         }
         number = '';
+        if(token === '-') {
+            number += token;
+            token = '+';
+        }
         if(isOperator(token)) {
             if(!operatorStack.length) {
                operatorStack.push(token);
