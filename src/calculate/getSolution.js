@@ -5,7 +5,6 @@ export function getSolution(expression) {
     const operatorStack = [];
     const outputQueue = [];
     let number = '';
-    console.log(expression);
     for(let token of expression) {
         if(!isOperator(token) && token !== '(' && token !== ')') {
             number += token;

@@ -16,8 +16,11 @@ class App extends React.Component {
         let answer;
         try{
             answer = getSolution(this.state.equation);
-        }catch (error) {
-            answer = 'error. Press AC';
+            if(answer === 'NaN') {
+                throw new Error('Invalid Expression');
+            }
+        } catch (error) {
+            answer = `${error}. Press AC`;
         }
         this.setState({
             solution: answer,
@@ -57,7 +60,7 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className = "container">
                 <Display 
                     value = {this.state.equation || this.state.solution }
                     changeHandler={this.handleChange}

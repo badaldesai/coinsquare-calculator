@@ -12,6 +12,7 @@ export function resolveEquation(outputQueue) {
         if(isOperator(element)) {
             const num1 = result.pop();
             const num2 = result.pop();
+            console.log(num2);
             const solve = OPERATOR[element](num2, num1);
             result.push(solve);
         }
